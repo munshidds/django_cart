@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <a href="{% url "index_" %}"> click hear</a>
+
+    <h1>{{ product }}</h1>
+
+    {% for i in product %}
+    <h2>{{ i.name }}</h2>
+    {% if i.status == 'available' %}
+    <h3 style="color: green;"> 'avaible' </h3>
+    {% elif i.status == 'not available' %}
+    <h3 style="color:red">not available</h3>
+    {% endif %}
+    {% endfor %}
+
+
+
+
+
+
+
+</body>
+</html>
